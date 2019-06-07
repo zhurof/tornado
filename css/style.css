@@ -2770,6 +2770,7 @@ tbody tr:last-child td, tbody tr:last-child th {
   border: 2px solid #92C83E;
   padding: 12px 130px 16px 29px;
   margin: 0 0 18px;
+  position: relative;
 }
 .faq__item:before {
   content: "+";
@@ -2782,7 +2783,7 @@ tbody tr:last-child td, tbody tr:last-child th {
   color: #fff;
   font-size: 21px;
   font-weight: 800;
-  line-height: 29px;
+  line-height: 26px;
 }
 .faq__question {
   font-size: 26px;
