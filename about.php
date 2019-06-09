@@ -14,7 +14,7 @@
 						<p>«Торнадо» — российский производитель <br>современного оборудования</p>
 					</div>
 					<div class="page-head__media">
-						<a href="#" class="video-link">
+						<a href="https://www.youtube.com/embed/OHgVWzaN-yQ" class="video-link" data-fancybox>
 							<span class="video-link__poster"><img src="img/video-poster.jpg" alt="" /></span>
 							<span class="video-link__caption">Посмотреть видео о компании</span>
 						</a>

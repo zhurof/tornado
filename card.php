@@ -10,9 +10,9 @@
 		} 
 	?>	
 	<span class="favorites-btn card__favorites"></span>
-	<div class="card__pic">
+	<a href="good.php" class="card__pic">
 		<img src="img/goods/<?=$card['image'];?>.jpg" alt="">
-	</div>
+	</a>
 	<div class="card__body">
 		<h3 class="card__title"><?=$card['title'];?></h3>
 		<div class="card__text">
@@ -20,7 +20,7 @@
 			<div class="details">
 				<div class="details__trigger">Характеристики</div>
 				<div class="details__content">
-					<table width="302">
+					<table width="302" class="small-table">
 						<tbody>
 							<tr>
 								<th width="163">Мощность</th>

@@ -64,26 +64,26 @@
 					</div>
 				</div>
 				<ul class="good__menu">
-					<li class="active"><a href="#">Описание</a></li>
-					<li><a href="#">Характеристики</a></li>
+					<li><a href="#description">Описание</a></li>
+					<li><a href="#chars">Характеристики</a></li>
 					<li><a href="#">Сертификаты</a></li>
 					<li><a href="#">Гарантия</a></li>
-					<li><a href="#">Вопросы и ответы</a></li>
+					<li><a href="#faq">Вопросы и ответы</a></li>
 					<li><a href="#">Применение прибора</a></li>
 				</ul>
 				<div class="good__columns">
-					<article class="good__content">
+					<article class="good__content" id="description">
 						<p>Крысы и мыши, а вместе с ними все прочие грызуны, для человека ничто иное, как самый настоящий бич. Мало того, что эти прожорливые зверьки уничтожают и портят все наши припасы, так они еще и способны изгрызть все, что угодно. Проделывая ход к пище, крыса способна прогрызть бетон и даже металл. Как крысы, так и мыши вездесущи, умеют карабкаться по казалось бы гладким вертикальным поверхностям, способны плавать и преодолевать весьма большие расстояния. В этом плане особенно выделяются крысы, ведь в поисках пищи они пробегают за ночь до 12 километров, но известны случаи, когда крысы за ночь преодолевали расстояние в 50 километров.</p>
 						<p>Как крысы, так и мыши очень хитрые и изобретательные бестии, но и здесь пальма первенства принадлежит крысам. Они способны опустошить емкость с маслом, опуская в него свои хвосты и затем, облизывая их, умеют воровать яйца и уносить их в свое гнездо. В таком случае одна крыса ложится на спину, зажимает лапами яйцо, а 3-4 товарки тащат ее за хвост. Крысы и мыши подобны саранче, пробравшейся в наши погреба, склады и кладовые, но самое неприятное заключается даже не в том, что они портят огромное количество продуктов питания, а являются переносчиками множества опасных заболеваний, многие из которых смертельны.</p>
-						<iframe width="641" height="300" src="https://www.youtube.com/embed/OHgVWzaN-yQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						<h3>Почему грызуны боятся ультразвукового отпугивателя «Торнадо М (100)»?</h3>
+						<iframe width="641" height="360" src="https://www.youtube.com/embed/OHgVWzaN-yQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<h3>Почему грызуны боятся ультразвукового отпугивателя<br> «Торнадо М (100)»?</h3>
 						<p>В борьбе с крысами люди использовали все средства массового поражения, кроме атомной бомбы, и ни одно из них не стало универсальным. Крысы неистребимы, но и на них есть управа - ультразвуковой отпугиватель крыс и мышей "Торнадо М" - мощная сила противодействия вредным грызунам - крысам и мышам. У всех грызунов очень острый звук. Более того, они слышат в недоступном нам ультразвуковом диапазоне. Считается, что люди способны слышать в диапазоне от 40 до 22000 герц, но поскольку человеческая речь находится в диапазоне от 300 до 4000 герц, то мы уверенно распознаем только эти звуки, а все что выше, только воспринимаем. Грызуны же, наоборот, «переговариваются» между собой в ультразвуковом диапазоне и потому органы слуха у них развиты гораздо лучше. Вот тут-то их и подстерегает главная опасность. В диапазоне ультразвука от 18 до 70 кГц имеются такие частоты, при которых акустические колебания воздуха становятся для них непереносимой пыткой и повергают грызунов в панику.</p>
 					</article>
-					<div class="good__chars">
+					<div class="good__chars" id="chars">
 						<table>
 							<tbody>
 								<tr>
-									<th>Тип</th>
+									<th width="190">Тип</th>
 									<td>для небольших помещений</td>
 								</tr>
 								<tr>
@@ -103,7 +103,7 @@
 									<td>2 - 10 Гц</td>
 								</tr>
 								<tr>
-									<th>Уровень ультразвукового давления на расстоянии 1 м</th>
+									<th>Уровень ультразвукового давления на расстоянии<br> 1 м</th>
 									<td>не менее 102 дБ</td>
 								</tr>
 							</tbody>
@@ -112,12 +112,62 @@
 				</div>
 			</div>
 		</div>
-		<div class="production">
+		<div class="info-block">
+			<div class="info-block__bg">
+				<img src="img/machine2.png" alt="">
+			</div>
 			<div class="wrapper">
-				
+				<div class="info-block__text">
+					<h2>Сами создаем, производим и продаем</h2>
+					<p>весь товар в нашем интернет-магазине. Покупать у производителя выгодно, потому что у нас есть:</p>
+					<div class="num-tabs">
+						<div class="num-tabs__item">
+							<div class="num-tabs__key">Профессиональные консультации</div>
+							<div class="num-tabs__value">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, fuga, aliquam, qui temporibus accusantium dolor nostrum nemo minima quibusdam voluptate ea veniam. Laboriosam sed dolor laborum dolores natus veritatis necessitatibus!</div>
+						</div>
+						<div class="num-tabs__item">
+							<div class="num-tabs__key">Лучшая цена</div>
+							<div class="num-tabs__value">нет</div>
+						</div>
+						<div class="num-tabs__item">
+							<div class="num-tabs__key">Гарантия или дешевый ремонт</div>
+							<div class="num-tabs__value">Даже идиот знает, что писать в отношении своих товаров или услуг "дешевый" - это плохо</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="faq">
+		<img src="img/separator-reverse.png" alt="" class="separator">
+		<div class="delivery-block">
+			<div class="delivery-block__bg">
+				<img src="img/scooter.png" alt="">
+			</div>
+			<div class="wrapper">
+				<div class="delivery-block__inner">
+					<h2 class="delivery-block__title">Быстрая и удобная доставка</h2>
+					<div class="box delivery-block__box">
+						<div class="delivery-block__item">
+							<div class="delivery-block__pic"><img src="img/icons/truck.svg" alt=""></div>
+							<div class="delivery-block__text">Курьерская доставка по Москве и Санкт-Петербургу от 230 рублей</div>
+						</div>
+						<div class="delivery-block__item">
+							<div class="delivery-block__pic"><img src="img/icons/envelope.svg" alt=""></div>
+							<div class="delivery-block__text">Доставка Почтой России по всему СНГ</div>
+						</div>
+						<div class="delivery-block__item">
+							<div class="delivery-block__pic"><img src="img/icons/box-hand.svg" alt=""></div>
+							<div class="delivery-block__text">Доставка до пункта выдачи или постамата</div>
+						</div>
+						<div class="delivery-block__item">
+							<div class="delivery-block__pic"><img src="img/icons/warehouse.svg" alt=""></div>
+							<div class="delivery-block__text">Самовывоз с производства в Тольятти</div>
+						</div>
+					</div>
+					<a href="#" class="info-link">Подробнее о доставке</a>
+				</div>
+			</div>
+		</div>
+		<div class="faq" id="faq">
 			<div class="wrapper">
 				<h2 class="faq__title">Вопросы и ответы</h2>
 				<div class="faq__tabs">

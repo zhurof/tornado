@@ -71,8 +71,20 @@
 			</div>
 		</div>
 	</footer>
+	<div class="modal" id="login">
+		<span class="modal__close icon-close"></span>
+		<h3>Оставьте заявку</h3>
+		<p>Мы свяжемся с вами в ближайшее время</p>
+		<form action="">
+			<input type="text" placeholder="Имя" />
+			<input type="tel" placeholder="Телефон" />
+			<button class="btn btn_block btn_green btn_highest">Отправить</button>
+		</form>
+		<pre>Отправляя форму вы соглашаетесь с политикой конфиденциальности</pre>
+	</div>
 	<script src="libs/jquery/jquery-3.4.1.min.js"></script>
 	<script src="libs/slick/slick.min.js"></script>
+	<script src="libs/fancybox/jquery.fancybox.min.js"></script>
 	<script src="js/script.js"></script>	
 </body>
 </html>

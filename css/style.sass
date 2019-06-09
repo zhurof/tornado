@@ -1,4 +1,5 @@
-﻿$green: #92C83E
+﻿$salad: #92C83E
+$green: #229244
 $dark-green: #15682E
 =placeholder($color)
 	&::-webkit-input-placeholder
@@ -81,7 +82,7 @@ textarea
 textarea
 	display: block
 	width: 100%
-	border: 3px solid $green
+	border: 3px solid $salad
 	margin: 0 0 20px
 	background: none
 	padding: 10px 20px
@@ -114,7 +115,7 @@ select
 .number
 	display: inline-block
 	white-space: nowrap
-	border: 2px solid $green
+	border: 2px solid $salad
 	font-size: 16px
 	font-weight: 800
 	text-align: center
@@ -156,8 +157,8 @@ button,
 	letter-spacing: .56px
 	color: #000
 	&_green
-		background-color: $green
-		border-color: $green
+		background-color: $salad
+		border-color: $salad
 	&_block
 		display: block
 		width: 100%
@@ -181,18 +182,19 @@ button,
 	padding: 0 0 0 50px
 	font-size: 18px
 	line-height: normal
-	color: #979797
 	&:before
 		content: '\e90b'
 		font: normal normal 39px/1 'icomoon'
-		color: $green
+		color: $salad
 		display: inline-block
 		position: absolute
 		left: -5px
 		top: 3px
 	&__title
 		display: block
-		color: #229244
+		color: $green
+	&__info
+		color: #979797
 .video-link
 	display: inline-block
 	width: 252px
@@ -209,7 +211,7 @@ button,
 			width: 70px
 			height: 70px
 			border-radius: 50%
-			background-color: $green
+			background-color: $salad
 			text-align: center
 			line-height: 70px
 			color: #fff
@@ -222,7 +224,21 @@ button,
 		img
 			display: block
 			width: 100%
-			border: 5px solid $green
+			border: 5px solid $salad
+.info-link
+	color: $salad
+	&:before
+		content: 'i'
+		font-size: 16px
+		display: inline-block
+		width: 18px
+		height: 18px
+		border: 1px solid
+		border-radius: 50%
+		line-height: 1
+		text-align: center
+		font-weight: 800
+		margin: 0 10px 0 0
 /*заголовки*/
 h1,h2,h3,h4,h5,h6
 	margin: 0 0 1em
@@ -255,14 +271,13 @@ ul,ol
 /*таблицы*/
 table
 	table-layout: fixed
-	max-width: 100%
-	font-size: 12px
-	line-height: auto
+	max-width: 100%	
+	line-height: normal
 	border-collapse: collapse
 	color: #373737
 td,th
-	padding: 3px 6px
-	border-bottom: 1px solid rgba(151,151,151,.04)
+	padding: 13px 10px 13px
+	border-bottom: 1px solid #e5e5e5	
 	vertical-align: top
 	&:first-child
 		padding-left: 0
@@ -270,18 +285,69 @@ th
 	font-weight: inherit
 	text-align: inherit
 	color: #979797
+	
 tbody tr:last-child
 	td,th
 		border-bottom: none
+.small-table
+	font-size: 12px
+	td,th
+		padding: 3px 6px
+		border-bottom: 1px solid rgba(151,151,151,.04)
+	
 /*контейнеры*/
 .wrapper
-	max-width: 1210px
+	max-width: 1220px
 	margin: 0 auto
-	padding: 0 15px
+	padding: 0 20px
 .box
 	display: flex
 	flex-wrap: wrap
-	margin: 0 -10px
+	margin: 0 -10px	
+.modal-wrapper
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 100
+	background-color: rgba(0, 0, 0, 0.81)
+	padding: 20px 10px
+	overflow: auto
+	display: flex
+	flex-direction: column
+	.modal
+		display: block
+.modal
+	display: none
+	background-color: #fff
+	box-shadow: 0 5px 10px rgba(0,0,0,.12)
+	width: 100%
+	max-width: 377px
+	position: relative
+	margin: auto
+	flex: 0 0 auto
+	padding: 47px 47px 59px
+	text-align: center
+	&__close
+		position: absolute
+		font-size: 19px
+		line-height: 1
+		padding: 10px
+		top: 0
+		right: 0
+		cursor: pointer
+	h3
+		margin: 0 0 .3em
+	p:nth-last-child(n+2)
+		margin: 0 0 1.4em
+	pre
+		white-space: normal
+		font-family: inherit
+		font-size: 13px
+		line-height: normal
+		margin: 1em 0 0
+		color: rgba(0,0,0,.4)
 /*ШАПКА*/
 .logo
 	display: inline-block
@@ -293,15 +359,15 @@ tbody tr:last-child
 	flex: 0 0 auto
 	&__btn
 		padding: 7px 23px
-		border-top: 1px solid $green
-		border-bottom: 1px solid $green
+		border-top: 1px solid $salad
+		border-bottom: 1px solid $salad
 		position: relative
 		color: black
 		&:first-child
-			border-left: 1px solid $green
+			border-left: 1px solid $salad
 			border-radius: 100px 0 0 100px
 		&:last-child
-			border-right: 1px solid $green
+			border-right: 1px solid $salad
 			border-radius: 0 100px 100px 0
 		&:nth-child(n+2):before
 			content: ''
@@ -310,13 +376,24 @@ tbody tr:last-child
 			left: 0
 			height: calc(100% - 16px)
 			top: 8px
-			border-left: 1px solid $green
+			border-left: 1px solid $salad
 			transition: inherit
 	&__icon
 		margin: 0 3px 0 0
 		font-size: 15px
 		&.icon-chat
 			font-size: 22px
+.menu-btn
+	display: none
+	font-family: icomoon
+	font-size: 18px
+	width: 2em
+	line-height: 42px
+	text-align: center
+	&:before
+		content: '\e90d'
+	&.active
+		color: $salad
 .main-menu
 	+unlist
 	&:before
@@ -401,18 +478,17 @@ tbody tr:last-child
 		text-align: center
 		font-size: 7px
 		border-radius: 50%
-		background-color: $green
+		background-color: $salad
 		position: absolute
 		left: 12px
 		top: 8px
 .favorites-btn
 	display: inline-block
-	cursor: pointer
 	font: normal normal 18px/42px 'icomoon'
 	&:before
 		content: '\e913'
 	&.active
-		color: $green
+		color: $salad
 		&:before
 			content: '\e914'
 .search-btn
@@ -470,7 +546,7 @@ tbody tr:last-child
 		letter-spacing: .43px
 	&__remove
 		display: inline-block
-		border: 2px solid $green
+		border: 2px solid $salad
 		border-left: none
 		line-height: 42px
 		width: 34px
@@ -564,6 +640,12 @@ tbody tr:last-child
 			line-height: 42px
 			padding: 0 0 0 5px
 			cursor: pointer
+	&__favorites
+		display: inline-block
+		color: inherit
+		font: normal normal 18px/42px 'icomoon'
+		&:before
+			content: '\e913'
 	&__cart
 		position: absolute
 		top: calc(100% + 12px)
@@ -575,7 +657,7 @@ tbody tr:last-child
 		width: 40px
 		height: 40px
 		border: 2px solid
-		color: $green
+		color: $salad
 		line-height: 36px
 		text-align: center
 		font-size: 17px
@@ -593,7 +675,7 @@ tbody tr:last-child
 			border-radius: 10px
 			margin: 7.5px
 			opacity: .2
-			background-color: $green
+			background-color: $salad
 			vertical-align: top
 		.slick-active
 			opacity: 1
@@ -661,7 +743,7 @@ tbody tr:last-child
 .service-card
 	width: 380px
 	margin: 0 10px 20px
-	border: 7px solid $green
+	border: 7px solid $salad
 	padding: 24px 33px 25px
 	overflow: hidden
 	position: relative
@@ -720,6 +802,7 @@ tbody tr:last-child
 			margin: 24px auto 0
 @supports(display: grid)
 	.service-card
+		width: auto
 		margin: 0
 		&.high
 			grid-row: 1 / span 2
@@ -738,7 +821,7 @@ tbody tr:last-child
 	&__title
 		position: relative
 		padding: 0 100px
-		&:before
+		&:after
 			content: ''
 			display: block
 			position: absolute
@@ -794,6 +877,7 @@ tbody tr:last-child
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-between
+		align-content: flex-start
 	&__link
 		display: inline-block
 		margin: 0 0 20px
@@ -809,6 +893,7 @@ tbody tr:last-child
 	img
 		display: block
 		width: 100%
+		+obj
 	&__caption
 		display: inline-block
 		position: absolute
@@ -832,7 +917,7 @@ tbody tr:last-child
 		margin: 0 0 17px
 	&.common
 		width: 176px
-		border: 7px solid $green
+		border: 7px solid $salad
 		height: 221px
 		line-height: 207px
 		text-align: center
@@ -863,20 +948,20 @@ tbody tr:last-child
 		position: relative
 		font-size: 26px
 		line-height: normal
-		margin: 0 0 35px
-		&:before
-			content: ''
-			display: block
-			position: absolute
-			top: 20px
-			left: -22px
-			width: 100px
-			height: 14px
-			background: url(../img/decor.svg) repeat-x
+		margin: 0 0 35px		
 		h2
 			margin: 0
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				top: 20px
+				left: -22px
+				width: 100px
+				height: 14px
+				background: url(../img/decor.svg) repeat-x
 	&__slider
-		padding-left: calc(50% - 605px + 15px)
+		padding-left: calc(50% - 610px + 20px)
 		&:not(.slick-initialized)
 			max-width: 1210px
 			margin: 0 auto
@@ -921,11 +1006,28 @@ tbody tr:last-child
 			margin: 0 7px
 	a
 		color: inherit
-@keyframes clip
-	from
-		clip-path: polygon(-10px -10px, calc(100% + 20px) -10px,calc(100% + 20px) -10px,-10px -10px)
-	to
-		clip-path: polygon(-10px -10px, calc(100% + 20px) -10px, calc(100% + 20px) calc(100% + 20px),-10px calc(100% + 20px))
+.action-banner
+	background: url(../img/action-banner.jpg) no-repeat center/cover
+	color: #fff
+	font-weight: 800
+	letter-spacing: .39px
+	text-align: center
+	line-height: normal
+	padding: 11px 0
+	text-transform: uppercase
+	.wrapper
+		position: relative
+	&__text
+		padding: 0 30px
+	&__close
+		display: inline-block
+		position: absolute
+		right: 20px
+		top: calc(50% - .5em)
+		font-size: 23px
+		line-height: 1
+		font-weight: 400
+		cursor: pointer
 .catalog
 	padding: 0 0 45px
 	&__nav
@@ -956,7 +1058,7 @@ tbody tr:last-child
 			&.list-view:before
 				content: '\e90d'
 			&.active
-				color: $green
+				color: $salad
 	&__head
 		border-bottom: 2px solid #E5E5E5
 		display: flex
@@ -968,6 +1070,7 @@ tbody tr:last-child
 		position: relative
 		align-self: flex-end
 		padding: 0 38px 11px 0
+		user-select: none
 		&:after
 			content: '\e900'
 			font: normal normal 16px/1 'icomoon'
@@ -975,21 +1078,22 @@ tbody tr:last-child
 			position: absolute
 			top: calc(50% - .5em)
 			right: 10px
-			color: $green
+			color: $salad
 			transition: all .4s ease
 	&__title
 		margin: 0
-		cursor: default
+		cursor: default		
 	&__cat-list
 		display: none
 		+unlist
 		position: absolute
+		z-index: 2
 		top: 100%
+		left: 0
 		width: 100%
 		background-color: #fff
 		padding: 10px 20px
 		box-shadow: 0 0 10px rgba(0,0,0,.2)
-		//animation: clip .3s ease-in-out
 	&__select:hover &__cat-list
 		display: block
 	&__filter
@@ -1009,7 +1113,7 @@ tbody tr:last-child
 					font-size: 8px
 					font-family: icomoon
 					margin: 0 0 0 8px
-					color: $green
+					color: $salad
 			>a
 				display: block
 				padding: 20px 3px
@@ -1023,13 +1127,14 @@ tbody tr:last-child
 					width: 100%
 					border-bottom: 2px solid transparent
 			&.active>a
-				color: $green
+				color: $salad
 				&:before
-					border-color: $green
+					border-color: $salad
 			ul
 				display: none
 				+unlist
 				position: absolute
+				z-index: 1
 				right: 0
 				top: calc(100% + 2px)
 				background-color: #fff
@@ -1042,7 +1147,7 @@ tbody tr:last-child
 		margin: 0 0 0 28px
 .details
 	&__trigger
-		color: #229244
+		color: $green
 		font-size: 18px
 		letter-spacing: .26px
 		cursor: pointer
@@ -1082,43 +1187,32 @@ tbody tr:last-child
 	width: 280px
 	margin: 0 10px 20px
 	position: relative
-	border: 3px solid $green
+	border: 3px solid $salad
 	text-align: center
 	font-size: 16px
 	&__favorites
+		cursor: pointer
 		position: absolute
-		top: 10px
+		top: -2px
 		right: 9px
 		color: rgba(0,0,0,.17)
 	&__label
-		//font-size: 18px
 		position: absolute
-		//font-weight: 800
-		//line-height: 1
-		//text-transform: uppercase
-		//color: #000
 		top: 7px
 		left: -23px
-		//padding: 12px 11px 12px 19px
-		//background: url(../img/yellow-label.svg) no-repeat left center/contain
-		//user-select: none
-		//letter-spacing: .82px
-		//z-index: 1
 		&.purp
-			//background-image: url(../img/purp-label.svg)
-			//padding: 12px 13px 12px 15px
-			//color: #fff
 			left: -21px
 			top: 10px
 	&__pic
-		border-bottom: 1px solid transparentize($green,.86)
+		display: block
+		border-bottom: 1px solid transparentize($salad,.86)
 		img
 			display: block
 			width: 100%
 			height: 216px
 			+obj
 	&__body
-		padding: 13px 20px 19px
+		padding: 13px 20px 14px
 		flex: 1 1 auto
 	&__title
 		font-size: 18px
@@ -1150,7 +1244,7 @@ tbody tr:last-child
 	&__btn
 		padding: 0 10px
 		flex: 1 1 auto
-		border-color: $green
+		border-color: $salad
 		&.btn_cart
 			font-size: 0
 			padding: 0
@@ -1172,7 +1266,7 @@ tbody tr:last-child
 		width: 274px
 		flex: 0 0 auto
 		align-self: flex-start
-		border-right: 1px solid transparentize($green,.86)
+		border-right: 1px solid transparentize($salad,.86)
 		border-bottom: none
 		position: relative
 		&:before/*нижняя граница, не влияющая на размеры блока*/
@@ -1182,7 +1276,7 @@ tbody tr:last-child
 			top: 100%
 			left: 0
 			width: 100%
-			border-bottom: 1px solid transparentize($green,.86)
+			border-bottom: 1px solid transparentize($salad,.86)
 		img
 			height: 216px
 	&.long &__favorites
@@ -1238,7 +1332,7 @@ tbody tr:last-child
 			left: -3px
 			top: -3px
 			height: calc(100% + 6px)
-			border-right: 3px solid $green
+			border-right: 3px solid $salad
 .page-head
 	background: url(../img/green-bg.jpg) no-repeat center/cover
 	color: #fff
@@ -1260,7 +1354,7 @@ tbody tr:last-child
 		line-height: normal
 	&__title
 		position: relative
-		&:before
+		&:after
 			content: ''
 			display: block
 			width: 100px
@@ -1274,7 +1368,7 @@ tbody tr:last-child
 		margin: 0 8px
 .contact
 	width: 380px
-	border: 3px solid $green
+	border: 3px solid $salad
 	margin: 0 0 20px
 	padding: 19px 28px 26px
 	line-height: normal
@@ -1290,6 +1384,8 @@ tbody tr:last-child
 			margin: 0
 .contacts
 	padding: 49px 0 10px
+	a
+		color: $green
 	&__wrapper
 		display: flex
 	&__main
@@ -1319,7 +1415,7 @@ tbody tr:last-child
 		h2
 			position: relative
 			margin: 0 0 .1em
-			&:before
+			&:after
 				content: ''
 				display: block
 				width: 100px
@@ -1371,7 +1467,7 @@ tbody tr:last-child
 	font-size: 26px
 	line-height: normal
 	text-align: center
-	h2
+	&__title
 		margin: 0 0 .5em
 		&:after
 			content: ''
@@ -1384,6 +1480,7 @@ tbody tr:last-child
 		margin: 0 0 1.4em
 	&__widget
 		margin: 0 auto
+		max-width: 100%
 .menu
 	border-bottom: 1px solid rgba(0,0,0,.1)
 	&__list
@@ -1411,10 +1508,15 @@ tbody tr:last-child
 		flex: 0 0 auto
 		margin: 0 51px 0 0
 		color: #fff
+		.slick-track
+			display: flex
 	&__slide
 		position: relative
 		&:not(.slick-slide):nth-child(n+2)
 			display: none
+		&.slick-slide
+			height: auto
+			flex: 1 1 auto
 		&:before
 			content: ''
 			display: block
@@ -1426,6 +1528,9 @@ tbody tr:last-child
 			background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001), #000)
 		img
 			display: block
+			width: 100%
+			height: 100%
+			+obj
 	&__arrow
 		position: absolute
 		z-index: 2
@@ -1457,7 +1562,7 @@ tbody tr:last-child
 			&:last-child
 				margin: 0
 .counter
-	background: linear-gradient(to bottom,$green 193px,transparent 193px)
+	background: linear-gradient(to bottom,$salad 193px,transparent 193px)
 	padding: 62px 0 10px
 	text-align: center
 	&__box
@@ -1476,13 +1581,13 @@ tbody tr:last-child
 	&__head
 		letter-spacing: .8px
 		font-weight: 800
-		color: $green
+		color: $salad
 	&__value
 		font-size: 50px
 .employer-card
 	margin: 0 10px 20px
 	width: 280px
-	border: 3px solid $green
+	border: 3px solid $salad
 	&__img
 		display: block
 		width: 100%
@@ -1524,7 +1629,7 @@ tbody tr:last-child
 	&__title
 		padding: 0 0 0 100px
 		position: relative
-		&:before
+		&:after
 			content: ''
 			display: block
 			position: absolute
@@ -1573,7 +1678,7 @@ tbody tr:last-child
 		h2
 			position: relative
 			margin: 0
-			&:before
+			&:after
 				content: ''
 				display: block
 				position: absolute
@@ -1597,6 +1702,7 @@ tbody tr:last-child
 		margin: 0 0 22px
 		p:only-child
 			margin-top: 7px
+	&__info
 		&:after
 			content: ''
 			display: block
@@ -1633,7 +1739,7 @@ tbody tr:last-child
 		display: block
 		width: max-content
 		max-width: 100%
-		color: $green
+		color: $salad
 		margin: 9px 0 10px
 .reviews
 	padding: 27px 0 56px
@@ -1674,7 +1780,7 @@ tbody tr:last-child
 			&:last-child
 				margin: 0
 .good
-	padding: 12px 0 0
+	padding: 12px 0 57px
 	&__breadcrumbs
 		font-size: 16px
 		margin: 0 0 17px
@@ -1742,12 +1848,12 @@ tbody tr:last-child
 			content: '\e908'
 			font-family: icomoon
 			font-size: 17px
-			color: $green
+			color: $salad
 			margin: 0 5px 0 0
 	&__action
 		display: inline-block
 		cursor: pointer
-		color: $dark-green
+		color: $green
 		margin: 0 25px 0 0
 		&:before
 			content: '\e912'
@@ -1758,13 +1864,16 @@ tbody tr:last-child
 	&__favorites
 		display: inline-block
 		cursor: pointer
-		color: $dark-green
+		color: $green
 		margin: 0 24px 0 0
 		&:before
 			content: '\e913'
 			font-size: 14px
 			font-family: icomoon
 			margin: 0 7px 0 0
+		&.active:before
+			content: '\e914'
+			color: $green
 	&__id
 		&:before
 			content: '\e90c'
@@ -1795,7 +1904,7 @@ tbody tr:last-child
 	&__buttons
 		display: inline-flex		
 	&__btn
-		border-color: $green
+		border-color: $salad
 		&.btn_cart
 			padding: 0
 			width: 46px
@@ -1808,6 +1917,7 @@ tbody tr:last-child
 		+unlist
 		border-bottom: 1px solid #E5E5E5
 		text-transform: uppercase
+		margin: 0 0 16px
 		>li
 			display: inline-block
 			margin: 0 25.2px 0 0
@@ -1825,6 +1935,21 @@ tbody tr:last-child
 					width: 100%
 					border-bottom: 1px solid transparent
 					transition: inherit
+	&__columns
+		display: flex
+	&__content
+		width: 647px
+		margin: 0 52px 0 0
+		flex: 1 1 auto
+		p
+			margin: 0 0 .7em
+			&:last-child
+				margin: 0
+		iframe
+			margin: .7em 0 1.2em
+	&__chars
+		width: 481px
+		flex: 0 0 auto
 			
 .delivery
 	+unlist
@@ -1846,6 +1971,8 @@ tbody tr:last-child
 		margin: 0 0 .8em
 		&:last-child
 			margin: 0
+	a
+		color: $green
 .share-block
 	margin: 0 0 1em
 	&__title
@@ -1863,7 +1990,129 @@ tbody tr:last-child
 		line-height: 23px
 		text-align: center
 		margin: 0 1.7px 0 0
+.num-tabs
+	counter-reset: num-tabs	
+	text-align: left
+	&__item
+		position: relative
+		padding: 14px 60px 15px 60px
+		border: 2px solid $salad
+		margin: 0 0 18px
+		font-size: 18px
+		line-height: normal
+		&:before
+			counter-increment: num-tabs
+			content: counter(num-tabs)
+			display: inline-block
+			line-height: 1.6
+			font-size: 28px
+			font-weight: 800
+			position: absolute
+			left: 20px
+			top: 0
+			min-width: 20px
+			text-align: center
+			background: url(../img/decor.svg) no-repeat center bottom/20px auto
+		&:after
+			content: '+'
+			display: inline-block
+			width: 29px
+			height: 29px
+			border-radius: 50%
+			text-align: center
+			background-color: $salad
+			color: #fff
+			font-size: 21px
+			font-weight: 800
+			line-height: 26px
+			position: absolute
+			top: 12px
+			right: 8px
+			transition: all .2s ease			
+		&.open:after
+			transform: rotate(45deg)
+	&__key
+		font-size: 26px
+		line-height: 24/26*1
+	&__value
+		display: none
+		padding: .7em 0 0
+.info-block
+	position: relative
+	padding: 71px 0 94px
+	&__bg
+		+pos
+		z-index: -1
+		overflow: hidden
+		img
+			position: absolute
+			&:nth-child(1)
+				top: 0
+				right: calc(50% + 98px)
+	&__text
+		max-width: 680px
+		padding: 0 102px 0 0
+		margin: 0 0 0 auto
+		font-size: 26px
+		line-height: normal
+		h2
+			margin: 0 0 .3em
+.delivery-block
+	padding: 42px 0 56px
+	position: relative
+	&__bg
+		+pos
+		z-index: -1
+		overflow: hidden
+		img
+			position: absolute
+			&:nth-child(1)
+				top: -6px
+				left: calc(50% + 117px)
+	&__inner
+		padding-left: 100px
+	&__title
+		position: relative
+		margin: 0 0 .9em
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			top: .45em
+			left: -120px
+			width: 100px
+			height: 14px
+			background: url(../img/decor.svg) repeat-x
+	&__box
+		max-width: 800px
+		margin-bottom: 16px
+	&__item
+		display: flex
+		align-items: center
+		width: 380px
+		margin: 0 10px 34px
+		font-size: 26px
+		line-height: normal
+		align-self: flex-start
+	&__pic
+		width: 79px
+		height: 79px
+		border: 3px solid $salad
+		flex: 0 0 auto
+		margin: 0 21px 0 0
+		position: relative
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			width: 38px
+	&__text
+		width: calc(100% - 80px)
+		flex: 1 1 auto
+		
 .history
+	padding: 57px 0 0
 	&__title
 		font-size: 28px
 		line-height: 30/28*1
@@ -1902,7 +2151,7 @@ tbody tr:last-child
 	padding: 46px 0 60px
 	text-align: center
 	font-size: 26px
-	line-height: auto
+	line-height: normal
 	&__title
 		margin: 0 0 .45em
 		&:after
@@ -1913,7 +2162,7 @@ tbody tr:last-child
 			margin: 22px auto 0
 			background: url(../img/decor.svg) repeat-x
 	p
-		margin: 0 0 .5em
+		margin: 0 0 .6em
 		&:last-child
 			margin: 0
 	&__form
@@ -1934,11 +2183,12 @@ tbody tr:last-child
 		margin: 0
 		color: rgba(0,0,0,.4)
 .faq
-	margin: 0 0 61px
+	margin: 0 0 64px
 	&__title
 		padding: 0 0 0 100px
 		position: relative
-		&:before
+		margin: 0 0 .8em
+		&:after
 			content: ''
 			display: block
 			position: absolute
@@ -1949,10 +2199,11 @@ tbody tr:last-child
 			background: url(../img/decor.svg) repeat-x	
 	&__item
 		max-width: 777px
-		border: 2px solid $green
+		border: 2px solid $salad
 		padding: 12px 130px 16px 29px
 		margin: 0 0 18px
 		position: relative
+		user-select: none
 		&:before
 			content: '+'
 			display: inline-block
@@ -1960,11 +2211,17 @@ tbody tr:last-child
 			height: 29px
 			border-radius: 50%
 			text-align: center
-			background-color: $green
+			background-color: $salad
 			color: #fff
 			font-size: 21px
 			font-weight: 800
 			line-height: 26px
+			position: absolute
+			top: 15px
+			right: 12px
+			transition: all .2s ease			
+		&.open:before
+			transform: rotate(45deg)
 			
 	&__question
 		font-size: 26px
@@ -1972,6 +2229,7 @@ tbody tr:last-child
 		user-select: none
 	&__answer
 		display: none
+		padding: 1em 0 0
 			
 			
 /*ПОДВАЛ*/
@@ -1991,7 +2249,7 @@ tbody tr:last-child
 		left: 0
 		background: url(../img/separator2.svg) no-repeat center/100% 100%
 	a
-		color: $green
+		color: $salad
 	&__topline
 		padding: 0 0 28px
 		.wrapper
