@@ -2928,7 +2928,7 @@ tbody tr:last-child td, tbody tr:last-child th {
 }
 .info-block__bg img:nth-child(1) {
   top: 0;
-  right: calc(50% + 98px);
+  left: -50px;
 }
 .info-block__text {
   max-width: 680px;
@@ -3620,7 +3620,7 @@ tbody tr:last-child td, tbody tr:last-child th {
   }
 
   .info-block__bg img:nth-child(1) {
-    right: calc(50% + 190px);
+    left: -250px;
   }
 
   .delivery-block__inner {
