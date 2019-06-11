@@ -455,7 +455,7 @@
 			font-size: 20px
 			width: 350px
 	.faq
-		margin: 0 0 15px
+		padding: 0 0 15px
 		&__title
 			text-align: center
 			padding: 0
@@ -618,6 +618,7 @@
 			flex-direction: column
 			align-items: center
 			user-select: none
+			padding: 0 0 10px
 		&__select
 			align-self: auto
 			padding: 0 38px 10px
@@ -631,8 +632,12 @@
 			a
 				display: block
 				padding: 10px
+		&__filter
+			text-align: center
+			>li
+				margin: 0 5px
 		&__sort
-			display: none
+			order: 1
 
 @media(max-width:479px)
 	table

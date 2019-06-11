@@ -38,6 +38,7 @@ body
 		size: 18px
 		family: 'Akrobat',sans-serif
 	line-height: 24/18*1
+	background-color: #FDFEFB
 header,footer
 	flex: 0 0 auto
 main
@@ -84,7 +85,7 @@ textarea
 	width: 100%
 	border: 3px solid $salad
 	margin: 0 0 20px
-	background: none
+	background: #fff
 	padding: 10px 20px
 input,textarea
 	+placeholder(inherit)
@@ -557,6 +558,7 @@ tbody tr:last-child
 		font-size: 11px
 .header
 	position: relative
+	background-color: #fff
 	&__topline
 		padding: 13px 0 12px
 		border-bottom: 1px solid rgba(0,0,0,.1)
@@ -747,6 +749,7 @@ tbody tr:last-child
 	padding: 24px 33px 25px
 	overflow: hidden
 	position: relative
+	background-color: #fff
 	&:before
 		content: ''
 		display: block
@@ -818,6 +821,7 @@ tbody tr:last-child
 .offers
 	overflow: hidden //спец хак для отображения шильдиков товаров за пределами слайдера
 	padding: 45px 0 49px
+	background-color: #fff
 	&__title
 		position: relative
 		padding: 0 100px
@@ -852,6 +856,8 @@ tbody tr:last-child
 .separator
 	display: block
 	width: 100%
+	&.white
+		background-color: #fff
 .about-block
 	padding: 50px 0 40px
 	font-size: 26px
@@ -926,6 +932,7 @@ tbody tr:last-child
 		font-weight: 800
 		order: 1
 		position: relative
+		background-color: #fff
 		&:before,&:after
 			content: ''
 			display: block
@@ -943,6 +950,7 @@ tbody tr:last-child
 		margin: 0 10px
 .news-block
 	padding: 47px 0 58px
+	background-color: #fff
 	&__head
 		padding: 0 98px
 		position: relative
@@ -1190,6 +1198,7 @@ tbody tr:last-child
 	border: 3px solid $salad
 	text-align: center
 	font-size: 16px
+	background-color: #fff
 	&__favorites
 		cursor: pointer
 		position: absolute
@@ -1372,6 +1381,7 @@ tbody tr:last-child
 	margin: 0 0 20px
 	padding: 19px 28px 26px
 	line-height: normal
+	background-color: #fff
 	h3
 		margin: 0 0 8px
 		small
@@ -1563,11 +1573,11 @@ tbody tr:last-child
 				margin: 0
 .counter
 	background: linear-gradient(to bottom,$salad 193px,transparent 193px)
-	padding: 62px 0 10px
+	padding: 62px 0 0
 	text-align: center
 	&__box
 		background-color: #fff
-		padding: 30px 0 11px
+		padding: 30px 0 21px
 		display: flex
 		flex-wrap: wrap
 	&__item
@@ -1588,6 +1598,7 @@ tbody tr:last-child
 	margin: 0 10px 20px
 	width: 280px
 	border: 3px solid $salad
+	background-color: #fff
 	&__img
 		display: block
 		width: 100%
@@ -1658,7 +1669,7 @@ tbody tr:last-child
 			&:last-child
 				margin: 0
 .awards
-	padding: 56px 0 40px
+	padding: 56px 0 30px
 	position: relative
 	&__bg
 		+pos
@@ -1742,7 +1753,8 @@ tbody tr:last-child
 		color: $salad
 		margin: 9px 0 10px
 .reviews
-	padding: 27px 0 56px
+	padding: 37px 0 56px
+	background-color: #fff
 	&__head
 		text-align: center
 		font-size: 26px
@@ -1804,6 +1816,7 @@ tbody tr:last-child
 		margin: 0 0 31px
 	&__slide
 		padding: 36px 0
+		background-color: #fff
 		&:not(.slick-slide):nth-child(n+2)
 			display: none
 		img
@@ -2040,9 +2053,9 @@ tbody tr:last-child
 .info-block
 	position: relative
 	padding: 71px 0 94px
+	background-color: #fff
 	&__bg
 		+pos
-		z-index: -1
 		overflow: hidden
 		img
 			position: absolute
@@ -2055,15 +2068,18 @@ tbody tr:last-child
 		margin: 0 0 0 auto
 		font-size: 26px
 		line-height: normal
+		position: relative
+		z-index: 1
 		h2
 			margin: 0 0 .3em
 .delivery-block
-	padding: 42px 0 56px
+	padding: 42px 0 18px
+	background-color: #fff
 	position: relative
 	&__bg
 		+pos
-		z-index: -1
 		overflow: hidden
+		z-index: 1
 		img
 			position: absolute
 			&:nth-child(1)
@@ -2071,6 +2087,8 @@ tbody tr:last-child
 				left: calc(50% + 117px)
 	&__inner
 		padding-left: 100px
+		position: relative
+		z-index: 2
 	&__title
 		position: relative
 		margin: 0 0 .9em
@@ -2152,6 +2170,7 @@ tbody tr:last-child
 	text-align: center
 	font-size: 26px
 	line-height: normal
+	background-color: #fff
 	&__title
 		margin: 0 0 .45em
 		&:after
@@ -2183,7 +2202,7 @@ tbody tr:last-child
 		margin: 0
 		color: rgba(0,0,0,.4)
 .faq
-	margin: 0 0 64px
+	padding: 38px 0 64px
 	&__title
 		padding: 0 0 0 100px
 		position: relative
@@ -2321,6 +2340,7 @@ tbody tr:last-child
 		padding: 10.5px 20px
 		flex: 1 1 auto
 		border-right: none
+		background: none
 	&__btn
 		flex: 0 0 auto
 		color: #000

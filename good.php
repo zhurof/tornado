@@ -137,7 +137,7 @@
 				</div>
 			</div>
 		</div>
-		<img src="img/separator-reverse.png" alt="" class="separator">
+		<img src="img/separator-reverse.png" alt="" class="separator white">
 		<div class="delivery-block">
 			<div class="delivery-block__bg">
 				<img src="img/scooter.png" alt="">
